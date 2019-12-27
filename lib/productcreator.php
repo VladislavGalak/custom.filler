@@ -110,7 +110,7 @@ class ProductCreator
 			'CREATED_BY' => 1,
 			'MODIFIED_BY' => 1,
 			'DATE_CREATE' => DateTime::createFromTimestamp('now'),
-			'CODE' => rand(0, 99999),
+			'CODE' => Dictionary::translit($name),
 		];
 		if ($eID = $element->Add($fields))
 		{
